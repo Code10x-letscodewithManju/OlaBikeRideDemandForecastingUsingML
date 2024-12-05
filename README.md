@@ -63,11 +63,12 @@ Repository Contents:
 
 Directory Structure :
 
-![image](https://github.com/user-attachments/assets/b952b0e1-e9ea-4d4b-8a57-379ea9e8db7a)
+![image](https://github.com/user-attachments/assets/fabbe69d-ff02-4dab-ab94-d2d08bd8b26f)
+
 
 How to Use This Repository & Run
 1.	Clone the repository: 
-2.	git clone https://github.com/yourusername/OlaBikeRideDemandForecastingUsingML.git  
+2.	git clone https://github.com/Code10x-letscodewithManju/OlaBikeRideDemandForecastingUsingML.git  
 3.	Explore the notebooks and scripts for data preprocessing, model training, and evaluation.
 4.	Run the Flask app locally to interact with the prediction system.
 
