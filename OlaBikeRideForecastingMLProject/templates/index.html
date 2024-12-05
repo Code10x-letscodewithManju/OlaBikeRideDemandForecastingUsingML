@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ola Bike Ride Demand Forecasting</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">
+            <img src="{{ url_for('static', filename='olalogo.png') }}" alt="Website Logo">
+            <h1>OLA</h1>
+        </div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#features">Features</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Animated Bike Background -->
+    <div id="background">
+        <img class="bike-animation" src="{{ url_for('static', filename='bike.png') }}" alt="Bike">
+    </div>
+
+    <!-- Main Section -->
+    <section id="home" class="main-section">
+        <div class="container">
+            <h1>Ola Bike Ride Demand Forecasting</h1>
+            <p>Forecast ride demand with cutting-edge machine learning technology.</p>
+            <form action="/predict" method="POST">
+                <!-- Year Dropdown -->
+                <label for="year">Year:</label>
+                <select id="year" name="year" required>
+                    <option value="">Select Year</option>
+                    {% for year in range(2022, 2036) %}
+                        <option value="{{ year }}">{{ year }}</option>
+                    {% endfor %}
+                </select><br><br>
+
+                <!-- Month Dropdown -->
+                <label for="month">Month:</label>
+            <select id="month" name="month" required>
+                <option value="">Select Month</option>
+                <option value="1">January</option>
+                <option value="2">February</option>
+                <option value="3">March</option>
+                <option value="4">April</option>
+                <option value="5">May</option>
+                <option value="6">June</option>
+                <option value="7">July</option>
+                <option value="8">August</option>
+                <option value="9">September</option>
+                <option value="10">October</option>
+                <option value="11">November</option>
+                <option value="12">December</option>
+            </select><br><br>
+
+                <!-- Date Dropdown -->
+                <label for="date">Date:</label>
+                <select id="date" name="date" required>
+                    <option value="">Select Date</option>
+                    {% for i in range(1, 32) %}
+                        <option value="{{ i }}">{{ i }}</option>
+                    {% endfor %}
+                </select><br><br>
+
+                <!-- Place Dropdown -->
+                <label for="place">Place:</label>
+                <select id="place" name="place" required>
+                    <option value="">Select Place</option>
+                    {% for place, encoded in places.items() %}
+                        <option value="{{ place }}">{{ place }}</option>
+                    {% endfor %}
+                </select><br><br>
+
+                <!-- Hour Dropdown -->
+                <label for="hour">Hour:</label>
+                <select id="hour" name="hour" required>
+                    <option value="">Select Hour</option>
+                    {% for i in range(24) %}
+                        <option value="{{ i }}">{{ i }}</option>
+                    {% endfor %}
+                </select><br><br>
+
+                <!-- Submit Button -->
+                <button type="submit">Predict Ride Demand</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features-section">
+        <h2>Features</h2>
+        <div class="slider">
+            <div class="slide">Ola Bike Ride - A fast and affordable way to travel!</div>
+            <div class="slide">Forecast demand to ensure availability during peak hours.</div>
+            <div class="slide">Powered by cutting-edge AI&ML and data science models.</div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Us</h2>
+        <p>
+            This web application is designed to predict ride demand for Ola Bike taxis in various regions of the city. 
+            With real-time weather, holiday, and time data, we provide accurate demand forecasts for better planning.
+        </p>
+        <p><strong>Creators:</strong> A team of Aspiring Engineers passionate about improving mobility.</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>If you have any issues or queries, please reach out:</p>
+        <ul>
+            <li>Email: support@olabikedemand.com</li>
+            <li>Phone: +91-9353681855</li>
+            <li>Address: Bangalore, India</li>
+        </ul>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Ola Ride Demand Forecasting. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<div id="background" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; overflow: hidden;">
+    <img src="{{ url_for('static', filename='mapg.jpg') }}" alt="Map" style="width: 100%; height: 100%; object-fit: cover;">
+</div>
+
+    
+    <div class="result-container">
+        <!-- Header Section -->
+        <header class="result-header">
+            <h1>Ride Demand Prediction</h1>
+            <p>Accurate and ML-driven insights for your selected inputs.</p>
+        </header>
+        <!-- Main Result Card -->
+        <div class="result-card">
+            <h2>Forecasted Ride Demand</h2>
+            <div class="highlight">
+                <strong>{{ ride_demand }}</strong>
+            </div>
+            <p>
+                Demand Level: 
+                {% if 0 <= ride_demand <= 25 %}
+                    Low
+                {% elif 26 <= ride_demand <= 49 %}
+                    Moderate
+                {% elif 50 <= ride_demand <= 100 %}
+                    High
+                {% else %}
+                    Very High
+                {% endif %}
+            </p>
+        </div>
+
+        <!-- Inputs Summary -->
+        <div class="summary-card">
+            <h3>Details of Prediction</h3>
+            <ul class="summary-list">
+                <li><strong>Year:</strong> {{ inputs.year }}</li>
+                <li><strong>Month:</strong> {{ inputs.month }}</li>
+                <li><strong>Date:</strong> {{ inputs.day }}</li>
+                <li><strong>Hour:</strong> {{ inputs.hour }}</li>
+                <li><strong>Place:</strong> {{ inputs.place }}</li>
+                <li><strong>Temperature:</strong> {{ inputs.temperature }}°C</li>
+                <li><strong>Day Status:</strong> {{ inputs.day_status }}</li>
+                <li><strong>Temperature Category:</strong> {{ inputs.temperature_category }}</li>
+            </ul>
+        </div>
+
+        <!-- Action Button -->
+        <div class="action-button">
+            <a href="/" class="back-btn">Go Back</a>
+        </div>
+    </div>
+</body>
+</html>

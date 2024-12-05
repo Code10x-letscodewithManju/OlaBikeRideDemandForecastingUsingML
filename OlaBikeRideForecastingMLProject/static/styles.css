@@ -1,0 +1,383 @@
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+h1, h2, h3 {
+    margin: 0 0 10px;
+}       
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .logo img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.navbar nav a {
+    color: white;
+    margin: 0 15px;
+    font-size: 1em;
+    transition: color 0.3s;
+}
+
+.navbar nav a:hover {
+    color: #FFD700;
+}
+/* Animated Bike Background */
+#background {
+    position: relative;
+    overflow: hidden;
+    height: 100px;
+    background: linear-gradient(to right, #FFCC00, #FFD700);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#background .bike-animation {
+    position: absolute;
+    bottom: 0;
+    width: 150px;
+    animation: bike-move 5s linear infinite;
+}
+
+@keyframes bike-move {
+    from {
+        left: -200px;
+    }
+    to {
+        left: 100%;
+    }
+}
+
+/* Main Section */
+.main-section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.main-section h1 {
+    font-size: 2.5em;
+    color: #333;
+}
+
+.main-section p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: #666;
+}
+
+.main-section form {
+    display: inline-block;
+    text-align: left;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.main-section form label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.main-section form select, 
+.main-section form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.main-section form button {
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.main-section form button:hover {
+    background-color: #555;
+}
+
+/* Features Section */
+.features-section {
+    background: #f8f9fa;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.features-section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.features-section .slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.features-section .slide {
+    background: #FFD700;
+    color: #333;
+    padding: 15px 20px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* About Section */
+#about {
+    padding: 40px 20px;
+    background: white;
+    text-align: center;
+}
+
+#about h2 {
+    color: #333;
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+#about p {
+    color: #666;
+    font-size: 1.1em;
+}
+
+/* Contact Section */
+#contact {
+    padding: 40px 20px;
+    background: #f8f9fa;
+    text-align: center;
+}
+
+#contact h2 {
+    color: #333;
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+#contact ul {
+    list-style: none;
+    padding: 0;
+}
+
+#contact ul li {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 20px;
+    margin-top: 20px;
+    font-size: 1em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #background {
+        height: 200px;
+    }
+
+    .main-section h1 {
+        font-size: 2em;
+    }
+
+    .features-section .slide {
+        font-size: 1em;
+    }
+}
+
+
+/* Result Page Container */
+.result-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: #333;
+    min-height: 100vh;
+}
+
+.result-header {
+    text-align: center;
+    margin-bottom: 30px;
+    background-color: #FFD700; /* Green background */
+    color: white; /* Text color */
+    padding: 20px; /* Inner spacing */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    width: 90%; /* Width of the box */
+    max-width: 600px; /* Maximum width */
+}
+
+.result-header h1 {
+    font-size: 2.5em;
+    color: #333;
+}
+
+.result-header p {
+    font-size: 1.2em;
+    color: #666;
+}
+
+/* Result Card */
+.result-card {
+    background: #FFD700; /* Gold background for focus */
+    color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    text-align: center;
+    width: 90%;
+    max-width: 600px;
+}
+
+.result-card h2 {
+    margin-bottom: 10px;
+    font-size: 1.8em;
+}
+
+.result-card .highlight {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #333;
+}
+/* Demand Levels */
+.demand-low {
+    background-color: #32CD32; /* Green */
+    color: white;
+}
+
+.demand-moderate {
+    background-color: #FFD700; /* Yellow */
+    color: #333;
+}
+
+.demand-high {
+    background-color: #FF8C00; /* Orange */
+    color: white;
+}
+
+.demand-very-high {
+    background-color: #FF4500; /* Red */
+    color: white;
+}
+
+/* Summary Card */
+.summary-card {
+    background: #fff; /* White background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    width: 90%;
+    max-width: 600px;
+    color: #333;
+}
+
+.summary-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.summary-list {
+    list-style: none;
+    padding: 0;
+}
+
+.summary-list li {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.summary-list li strong {
+    color: #FFD700;
+}
+
+/* Action Button */
+.action-button {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.back-btn {
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.back-btn:hover {
+    background-color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .result-card, .summary-card {
+        width: 100%;
+    }
+
+    .result-header h1 {
+        font-size: 2em;
+    }
+
+    .result-header p {
+        font-size: 1em;
+    }
+
+    .result-card .highlight {
+        font-size: 2em;
+    }
+
+    .summary-list li {
+        font-size: 1em;
+    }
+}
