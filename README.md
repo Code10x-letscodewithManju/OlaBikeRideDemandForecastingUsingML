@@ -1,79 +1,146 @@
-# OlaBikeRideDemandForecastingUsingML
+# 🚴 Ola Bike Ride Demand Forecasting Using Machine Learning
 
-Welcome to the repository of my mini-project
+**Welcome to the repository of my mini-project!**
+This project predicts Ola bike ride demand patterns across Bangalore, using machine learning to enhance urban mobility for riders and Ola.
 
-🚴 Ola Bike Ride Demand Forecasting Using Machine Learning 🚴
+---
 
-This project is designed to predict ride demand patterns across Bangalore, leveraging machine learning to enhance urban mobility for both riders and Ola.
+## 📌 Project Overview
 
-Project Overview:
+Predicting ride demand can:
 
-Predicting ride demand can significantly improve ride availability, reduce wait times, and optimize resource management. This project uses historical data from 2022 to 2024 combined with real-time inputs like weather and calendar data to make accurate predictions for future ride demand.
-Key Features and Highlights
+* Improve ride availability
+* Reduce wait times
+* Optimize driver allocation
 
-1.	Smart Predictions:
-o	Forecast ride demand based on key variables like time, place, weather, day status (holiday/working day), and temperature.
-o	Integrated dynamic data sources to make the predictions adaptable to real-world scenarios.
+We use historical data (2022–2024) + real-time inputs like weather and calendar data to make accurate predictions.
 
-2.	Powerful ML Model:
-o	Built using LightGBM Regressor, a highly efficient boosting algorithm known for its speed and accuracy in handling large datasets.
-o	Optimized model performance using hyperparameter tuning and evaluation metrics like R² Score, RMSE, and Mean Absolute Error.
+---
 
-3.	Dynamic APIs:
-o	Google Calendar API: Automatically determines if a selected date is a holiday or working day.
-o	OpenWeather API: Fetches real-time temperature data for the chosen date, time, and location.
+## ✨ Key Features
 
-4.	Interactive Web Application:
-o	A user-friendly interface built with Flask, styled using HTML and CSS, featuring an Ola-inspired theme for intuitive usability.
-o	Allows users to input date, time, location, and dynamically fetch supporting data to predict ride demand instantly.
+### **Smart Predictions**
 
-5.	Scalable Model:
-o	Model saved and serialized using Joblib and Pickle, ensuring it is ready for deployment or integration into larger systems.
+* Forecast ride demand using time, place, weather, day status, and temperature.
+* Dynamic integration of real-world data sources.
 
-6.	Comprehensive Data Processing:
-o	Extensive Exploratory Data Analysis (EDA) to identify trends, correlations, and outliers.
-o	Features engineered to represent demand influencers such as trend (representing years) and day_status.
+### **Powerful ML Model**
 
-Technology Stack
-•	Python Libraries: Pandas, NumPy, Scikit-learn, LightGBM, Matplotlib, Seaborn.
-•	Machine Learning Workflow: 
-  o	Data cleaning, preprocessing, and handling missing values.
-  o	Encoding categorical variables and scaling numerical data.
-  o	Model training, hyperparameter tuning, and evaluation.
-•	Dynamic API Integration: Google Calendar and OpenWeather APIs for real-time data fetching.
-•	Web App Development: Flask for backend functionality and HTML/CSS for frontend design.
+* **LightGBM Regressor** for high accuracy and speed with large datasets.
+* Hyperparameter tuning + evaluation via **R²**, **RMSE**, **MAE**.
 
-Impact of the Project
-•	For Riders: 
-o	Plan smarter trips by understanding peak demand times and locations.
-o	Ensure better ride availability and reduce wait times during busy hours.
-•	For Ola: 
-o	Optimize driver allocation to meet demand more efficiently.
-o	Improve user satisfaction by minimizing delays and overbooking.
+### **Dynamic APIs**
 
-Team Effort
-This project was a collaborative effort with an exceptional team:
-Manjunath S, Likith Reddy, Justin Sebastian Thomas, and Marilinga. Together, we brought this idea to life! 🚀
+* **Google Calendar API**: Detects holiday or working day.
+* **OpenWeather API**: Fetches real-time temperature for given date, time, and location.
 
-Repository Contents:
-•	Dataset: Preprocessed and cleaned ride demand data.
-•	Model: Trained LightGBM model saved as .pkl file.
-•	Scripts: Python scripts for preprocessing, training, and Flask app development.
-•	Web Application: A complete Flask-based frontend for dynamic predictions.
+### **Interactive Web Application**
 
-Directory Structure :
+* Flask backend with HTML/CSS frontend (Ola-inspired theme).
+* Users enter date, time, location — system fetches API data & predicts instantly.
 
-![image](https://github.com/user-attachments/assets/fabbe69d-ff02-4dab-ab94-d2d08bd8b26f)
+### **Scalable & Ready for Deployment**
 
+* Model saved using **Joblib** and **Pickle**.
+* Modular design for integration into larger systems.
 
-How to Use This Repository & Run
-1.	Clone the repository: 
-2.	git clone https://github.com/Code10x-letscodewithManju/OlaBikeRideDemandForecastingUsingML.git  
-3.	Explore the notebooks and scripts for data preprocessing, model training, and evaluation.
-4.	Run the Flask app locally to interact with the prediction system.
+---
 
+## 🛠 Technology Stack
 
-This project is a step toward intelligent urban mobility and demonstrates the potential of data-driven solutions in solving real-world challenges.
-Let us know your thoughts and ideas for future enhancements! 🚴
-_____________________________________
+**Languages & Libraries**
 
+* Python, Pandas, NumPy, Scikit-learn, LightGBM, Matplotlib, Seaborn.
+
+**Workflow**
+
+* Data cleaning & preprocessing (missing values handled)
+* Encoding & scaling
+* Model training & evaluation
+
+**APIs**
+
+* Google Calendar API
+* OpenWeather API
+
+**Web**
+
+* Flask backend
+* HTML/CSS frontend
+
+---
+
+## 📊 Impact
+
+**For Riders**
+
+* Plan smarter trips during peak/off-peak hours.
+* Better ride availability, reduced waiting.
+
+**For Ola**
+
+* Smarter driver allocation.
+* Increased customer satisfaction.
+
+---
+
+## 👥 Team
+
+**Contributors:**
+Manjunath S, Likith Reddy, Justin Sebastian Thomas, Marilinga.
+
+---
+
+## 📂 Repository Contents
+
+* **Dataset** – Preprocessed ride demand data
+* **Model** – Trained LightGBM model (`.pkl`)
+* **Scripts** – Data processing, model training, Flask backend
+* **Web App** – Flask-based interface for predictions
+
+---
+
+## 📁 Directory Structure
+
+*(Add screenshot or tree view here)*
+
+---
+
+## 🚀 How to Run Locally
+
+### 1️⃣ Clone the repository
+
+```bash
+git clone https://github.com/Code10x-letscodewithManju/OlaBikeRideDemandForecastingUsingML.git
+cd OlaBikeRideDemandForecastingUsingML
+```
+
+### 2️⃣ Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 3️⃣ Run the Flask app
+
+```bash
+python app.py
+```
+
+Access in browser at **[http://127.0.0.1:5000/](http://127.0.0.1:5000/)**
+
+---
+
+## 💡 Future Enhancements
+
+* Integrate real-time ride booking data from Ola API.
+* Add traffic congestion analysis.
+* Expand to multiple cities.
+
+---
+
+## 📜 License
+
+MIT License
+
+---
